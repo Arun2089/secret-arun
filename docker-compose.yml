@@ -5,6 +5,6 @@ services:
     image: nginx:latest
     container_name: my_nginx
     ports:
-      - "4322:80"
+      - "4323:80"
     env_file:
       - arun.env
