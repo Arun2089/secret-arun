@@ -4,4 +4,4 @@ secret_string=$(echo "$output" | jq -r '.SecretString')
 key_value=$(echo "$secret_string" | jq -r 'to_entries | .[] | "\(.key)=\(.value)"')
 echo "$key_value" > arun.env
 ccrypt -e -k arun arun.env
-
+rm -f arun.env
